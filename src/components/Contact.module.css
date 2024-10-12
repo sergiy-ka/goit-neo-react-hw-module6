@@ -1,15 +1,18 @@
 .contact {
   display: flex;
+  flex-direction: row;
   padding: 10px;
   border: 2px solid #000000;
   border-radius: 5px;
   width: 270px;
+  height: auto;
   justify-content: space-between;
 }
 
 .contact__container {
   display: flex;
   flex-direction: column;
+  max-width: 200px;
 }
 
 .contact__icon {
@@ -17,14 +20,24 @@
   margin-right: 5px;
 }
 
-.contact__name {
-  display: flex;
-  align-items: center;
-}
-
+.contact__name,
 .contact__number {
   display: flex;
   align-items: center;
+  margin-right: 5px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name {
+  display: flex;
+  max-width: 160px;
+}
+
+.number {
+  display: flex;
+  max-width: 160px;
 }
 
 .contact__actions {
